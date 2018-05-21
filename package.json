@@ -1,0 +1,40 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "index.walfud.com",
+  "main": "index.js",
+  "scripts": {
+    "debug": "babel-node app.js",
+    "start": "node build/app.js",
+    "build": "babel . --out-dir build --ignore node_modules,build --source-maps",
+    "clean": "rm -rf build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walfud/index.git"
+  },
+  "keywords": [
+    "homepage"
+  ],
+  "author": "walfud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walfud/index/issues"
+  },
+  "homepage": "https://github.com/walfud/index#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-logger": "^3.2.0",
+    "mongodb": "^3.0.8",
+    "mysql": "^2.15.0",
+    "node-fetch": "^2.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0"
+  }
+}

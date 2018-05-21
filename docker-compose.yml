@@ -1,0 +1,23 @@
+version: "3"
+services:
+
+  node:
+    image: node:10
+    container_name: index
+    env_file: .env
+    working_dir: /index
+    command: npm clean && npm build && npm start
+    volumes:
+      - .:/index
+    ports:
+      - "62746:3000"
+    expose:
+      - "3000"
+    networks:
+      static:
+        ipv4_address: 192.168.100.150
+
+
+networks:
+  static:
+    external: true
