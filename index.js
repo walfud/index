@@ -1,9 +1,11 @@
 import 'babel-polyfill'
 
+const app = '10086';
+
 (async function () {
-    switch ('10086') {
+    switch (app) {
         case '10086':
-            await import('./app/10086')
+            await import(`./app/10086`)
             break
         default:
             break
