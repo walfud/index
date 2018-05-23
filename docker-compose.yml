@@ -6,7 +6,7 @@ services:
     container_name: index
     env_file: .env
     working_dir: /index
-    command: npm clean && npm build && npm start
+    command: npm run build && npm start
     volumes:
       - .:/index
     ports:
