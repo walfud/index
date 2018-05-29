@@ -2,7 +2,7 @@ import 'babel-polyfill'
 import React from "react"
 import ReactDOM from "react-dom"
 
-const match = /^(?:.+?\.com\/)([^/]+).*$/i.exec(document.URL)
+const match = /^(?:.+?\.com)(?:\/)?([^/]*).*$/i.exec(document.URL)
 const path = match && match[1]
 
 console.log(document.URL)
@@ -11,6 +11,7 @@ console.log(path)
 ;(async function () {
     let app
     switch (path) {
+        case '':
         case 'index':
             app = await import(`./app/index`)
             break
