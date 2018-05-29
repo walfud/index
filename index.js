@@ -2,7 +2,7 @@ import 'babel-polyfill'
 import React from "react"
 import ReactDOM from "react-dom"
 
-const match = /^(?:.+?\.com)(?:\/)?([^/]*).*$/i.exec(document.URL)
+const match = /:\/\/(\w*)\.walfud\.com/.exec(document.URL)
 const path = match && match[1]
 
 console.log(document.URL)
