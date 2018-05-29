@@ -1,13 +1,22 @@
 import 'babel-polyfill'
+import React from "react"
+import ReactDOM from "react-dom"
 
-const app = '10086';
+const match = /^(?:.+?\.com\/)([^/]+).*$/i.exec(document.URL)
+const path = match && match[1];
 
 (async function () {
-    switch (app) {
+    let app
+    switch (path) {
+        case 'index':
+            app = await import(`./app/index`)
+            break
         case '10086':
-            await import(`./app/10086`)
+            app = await import(`./app/10086`)
             break
         default:
+            app = await import(`./app/404`)
             break
     }
+    ReactDOM.render(React.createElement(app.default, null, null), document.getElementById("root"))
 })()

@@ -1,9 +1,8 @@
 import React, {
     Component,
 } from "react"
-import ReactDOM from "react-dom"
 
-class App extends React.Component {
+export default class App extends React.Component {
     constructor() {
         super()
 
@@ -221,10 +220,3 @@ class TextFilter extends Component {
         )
     }
 }
-
-
-// class CheckFilter extends Component {
-
-// }
-
-ReactDOM.render(<App />, document.getElementById("app"))
