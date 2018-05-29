@@ -6,9 +6,9 @@ const match = /^(?:.+?\.com\/)([^/]+).*$/i.exec(document.URL)
 const path = match && match[1]
 
 console.log(document.URL)
-console.log(path);
+console.log(path)
 
-(async function () {
+;(async function () {
     let app
     switch (path) {
         case 'index':
