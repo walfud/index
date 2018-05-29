@@ -16,7 +16,7 @@ export default class App extends React.Component {
 
     componentDidMount() {
         (async () => {
-            const body = await fetch('http://10086.walfud.com/api/num').then(res => res.text())
+            const body = await fetch('http://service.walfud.com/10086/nums').then(res => res.text())
             const nums = JSON.parse(body)
             this.setState({
                 nums: nums.sort((a, b) => a.num - b.num),
