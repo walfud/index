@@ -2,16 +2,15 @@ import 'babel-polyfill'
 import React from "react"
 import ReactDOM from "react-dom"
 
-const match = /:\/\/(\w*)\.walfud\.com/.exec(document.URL)
-const path = match && match[1]
+const [host, dir, ..._] = document.URL.replace(/^https?:\/\//i, '').split('/')
 
 console.log(document.URL)
-console.log(path)
+console.log(host)
+console.log(dir)
 
 ;(async function () {
     let app
-    switch (path) {
-        case '':
+    switch (dir || 'index') {
         case 'index':
             app = await import(`./app/index`)
             break
