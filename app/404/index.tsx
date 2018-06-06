@@ -1,5 +1,5 @@
 import * as React from "react"
-import 'wired-elements'
+import { WiredCard, WiredListbox, WiredItem, } from "wired-elements"
 
 interface IProps { }
 interface IState {
@@ -14,13 +14,14 @@ export default class App extends React.Component<IProps, IState> {
       <div
         style={{
           display: "flex",
-          flex: 1,
+          width: "100%",
+          height: "100%",
           justifyContent: "center",
           alignItems: "center"
         }}
       >
-        <img src={require('./404.png')} />
-        <span>404 Not Found!</span>
+        {/* <img src={require('./404.png')} /> */}
+        {this._renderSecret()}
       </div>
     );
   }
@@ -28,14 +29,14 @@ export default class App extends React.Component<IProps, IState> {
   _renderSecret() {
     return (
       <div>
-        <wired-card>
+        <WiredCard>
           <h4>Anydesk</h4>
-          <wired-listbox>
-            <wired-item text="home: desktop-c4cqn3p@ad" />
-            <wired-item text="office: 586822336" />
-            <wired-item text="mac: 417286111" />
-          </wired-listbox>
-        </wired-card>
+          <WiredListbox>
+            <WiredItem text="home: desktop-c4cqn3p@ad" />
+            <WiredItem text="office: 586822336" />
+            <WiredItem text="mac: 417286111" />
+          </WiredListbox>
+        </WiredCard>
       </div>
     )
   }
