@@ -17,9 +17,6 @@ console.log(dir)
         case '10086':
             app = await import(`./app/10086`)
             break
-        case 'note':
-            app = await import(`./app/note`)
-            break
         default:
             app = await import(`./app/404`)
             break
