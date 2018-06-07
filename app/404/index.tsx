@@ -1,13 +1,11 @@
-import * as React from "react"
-import { WiredCard, WiredListbox, WiredItem, } from "wired-elements"
+import * as React from 'react'
+import { WiredCard, WiredListbox, WiredItem, } from 'wired-elements'
 
 interface IProps { }
-interface IState {
-
-}
+interface IState { }
 
 export default class App extends React.Component<IProps, IState> {
-  state = {};
+  state = {}
 
   render() {
     return (

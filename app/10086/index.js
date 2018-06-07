@@ -1,6 +1,6 @@
 import React, {
     Component,
-} from "react"
+} from 'react'
 
 export default class App extends Component {
     constructor() {
