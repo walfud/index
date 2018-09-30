@@ -30,9 +30,8 @@ export default class App extends React.Component<IProps, IState> {
         <WiredCard>
           <h4>Anydesk</h4>
           <WiredListbox>
-            <WiredItem text="home: desktop-c4cqn3p@ad" />
-            <WiredItem text="office: 586822336" />
-            <WiredItem text="mac: 417286111" />
+            <WiredItem text="home: 857249776" />
+            <WiredItem text="office: 417286111" />
           </WiredListbox>
         </WiredCard>
       </div>
